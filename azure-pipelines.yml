@@ -4,14 +4,14 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-  - main
+ - main
 
-  pool:
-    vmImage: 'Ubuntu-16.04'
+pool:
+ vmImage: 'vs2017-win2016'
 
-  steps:
-  - task: Maven@3
-    inputs:
+steps:
+ - task: Maven@3
+   inputs:
       mavenPomFile: 'pom.xml'
       mavenOptions: '-Xmx3072m'
       javaHomeOption: 'JDKVersion'
